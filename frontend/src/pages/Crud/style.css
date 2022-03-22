@@ -1,0 +1,12 @@
+.container-crud{
+    text-align: center;
+    margin: 17em auto;
+    max-width:600px;
+}
+#btn-lgt{
+    margin-top: 4em;
+}
+
+#btn-lgt:hover{
+    color: white;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.main-produtos{
+    margin-top: 6em;
+
+}
+
+
+.main-produtos h1{
+    text-align: center;
+    /*color: #a58863;*/
+    color:#00a16e;  
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+}
+
+.card{
+    border-radius: 0%;
+    border: 1px solid #cccccc;
+    height: 330px;
+    text-align: center;
+}
+
+.card-img-top{
+    border-radius: 0%;
+    height:180px;
+    object-fit: cover;
+}
+
+.c-cards{
+    max-width: 1000px;
+    margin: 2em auto;
+
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-body h6{
+    font-family: 'Lora', serif;
+    color: black;
+}
+
+.card-title{
+    font-family: 'Lora', serif;
+    color: black;
+}
+
+.btn-compra{
+    padding: 0.6em;
+    border-radius: 0%;
+    color: rgb(25, 112, 83);
+    text-transform: initial;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-bottom: 2px solid rgb(25, 112, 83);
+    box-shadow: none;
+    width: 100%;
+}
+
+.btn:hover{
+    color: rgb(25, 112, 83);
+    box-shadow: 0 1px 0 0 rgb(25, 112, 83);
+    /*box-shadow: 0 2px 0 0 #b9d688;*/
+}
+
+.title-artesanato-mandiocultura{
+   
+    justify-content: center;
+	justify-items: center;
+    display: flex;
+
+}
+
+.h-icon{
+   
+    height:29px;
+    width: 29px;
+    margin: 0.4em 0.5em;
+}
+
+.hr-style{
+    width:100%;
+    border-width:0;
+    background: transparent;
+    border-top:3px dotted rgb(7, 46, 6); 
+    height:2px;
+}
+
+.btn:active, .btn:focus {
+    box-shadow: none !important;
+}
+
+.img-container{
+    height: 200px;
+    
+}
+
+#m-st{
+    margin-top: 5em;
+}
+
+.fa-info{
+    font-size: 9px;
+}
+
+@media(max-width:650px){
+    
+    .h-icon{      
+        height:21px;
+        width: 21px;
+    }
+}

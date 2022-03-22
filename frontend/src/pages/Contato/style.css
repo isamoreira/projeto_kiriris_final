@@ -1,0 +1,135 @@
+.main-contato{
+	margin-top:5em;
+}
+
+.header-contato{
+	text-align: center;
+}
+
+.header-contato h1{
+	
+	color: #4f4f4f;
+}
+
+#baloon{
+	height: 80px;
+	width: 80px;
+}
+
+.container-formulario-contato{
+	padding: 3em;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.formulario-contato .form-group{
+	margin-bottom: 2em;
+}
+
+.formulario-contato .control-label{
+	display: none;
+	margin: 0.1em;
+}
+
+.formulario-contato{
+	margin: 0 auto;
+	max-width: 420px;
+}
+
+#contato-btn:hover{
+	color:white;
+}
+
+
+.form-control{	
+
+	width: 100%;
+	margin-top: 1em;
+}
+
+.styletrue{	
+
+	width: 100%;
+	margin-top: 1em;
+	border: none;
+	border-bottom: 1px solid gray;
+	border-radius: 0%;
+	outline: #28a745;
+	box-shadow:none;
+}
+
+#ta{
+
+	border: none;
+	border-bottom: 1px solid gray;
+	border-radius: 0%;
+	outline: #28a745;
+	
+}
+
+
+.styletrue:focus {
+	outline: #28a745;
+	box-shadow:none;
+} 
+
+.formulario-contato .form-group-s{
+
+	border: none;
+
+}
+
+.newsletter{
+	position: relative;
+	margin: 2em auto;
+	max-width: 1000px;
+	padding: 5em;
+	background-color: #FDFAF6;
+	border: 5px solid #c5dad8;
+	
+}
+
+#newsicon{
+	height: 120px;
+	width: 120px;
+	margin-left: 1em;
+	right: 10%;
+	bottom: 20%;
+	position: absolute;
+}
+
+.newsletter input{
+	border-top: transparent;
+	border-left: transparent;
+	border-right: transparent;
+	max-width: 320px;
+	background-color: transparent;
+	border-radius: 0%;
+	color: black;
+}
+
+#btn-newsletter{
+	background-color:#badbd8;
+	color: white;
+	border: transparent;
+	margin-left: 1em;
+	box-shadow: none;
+}
+
+
+@media(max-width: 990px){
+	.newsletter input{
+
+		max-width: 270px;	
+	}
+	#newsicon{
+		display: none;
+	}
+}
+
+.newsletter label{
+	margin-left: 0.2em;
+}
+
+
+

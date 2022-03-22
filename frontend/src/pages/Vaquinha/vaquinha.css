@@ -1,0 +1,14 @@
+.vaquinha-container{
+    max-width: 500px;
+    margin: 2em auto;
+}
+
+#title-vaquinha{
+    margin-top: 2em;
+    color:#00a16e;  
+    text-align: center;
+}
+
+#p-chave{
+    color: #00a16e;
+}

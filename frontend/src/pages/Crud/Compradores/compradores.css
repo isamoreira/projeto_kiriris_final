@@ -1,0 +1,15 @@
+.container-title-c-compradores, .container-compradores-create{
+    margin-top: 2em;
+}
+
+.container-title-c-compradores h3{
+    text-align: center;
+}
+
+.form-crud{
+    max-width: 500px;
+    margin: 2em auto;
+        
+}
+    
+    

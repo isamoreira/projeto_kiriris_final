@@ -1,0 +1,191 @@
+--
+-- TOC entry 203 (class 1259 OID 16765)
+-- Name: comprador; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.comprador (
+    comprador_id bigint NOT NULL,
+    nomedaempresa character varying(255)
+);
+
+
+ALTER TABLE public.comprador OWNER TO postgres;
+
+--
+-- TOC entry 202 (class 1259 OID 16763)
+-- Name: comprador_comprador_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.comprador_comprador_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.comprador_comprador_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2989 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: comprador_comprador_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.comprador_comprador_id_seq OWNED BY public.comprador.comprador_id;
+
+
+--
+-- TOC entry 205 (class 1259 OID 16773)
+-- Name: produto; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.produto (
+    id_produto bigint NOT NULL,
+    nomeproduto character varying(255),
+    quantidade integer,
+    tipoproduto character varying(255),
+    valor numeric(19,2),
+    comprador_id bigint,
+    id_vendedor bigint
+);
+
+
+ALTER TABLE public.produto OWNER TO postgres;
+
+--
+-- TOC entry 204 (class 1259 OID 16771)
+-- Name: produto_id_produto_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.produto_id_produto_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.produto_id_produto_seq OWNER TO postgres;
+
+--
+-- TOC entry 2990 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: produto_id_produto_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.produto_id_produto_seq OWNED BY public.produto.id_produto;
+
+
+--
+-- TOC entry 207 (class 1259 OID 16784)
+-- Name: vendedor; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.vendedor (
+    id_vendedor bigint NOT NULL,
+    nomevendedor character varying(255)
+);
+
+
+ALTER TABLE public.vendedor OWNER TO postgres;
+
+--
+-- TOC entry 206 (class 1259 OID 16782)
+-- Name: vendedor_id_vendedor_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.vendedor_id_vendedor_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.vendedor_id_vendedor_seq OWNER TO postgres;
+
+--
+-- TOC entry 2991 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: vendedor_id_vendedor_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.vendedor_id_vendedor_seq OWNED BY public.vendedor.id_vendedor;
+
+
+--
+-- TOC entry 2847 (class 2604 OID 16768)
+-- Name: comprador comprador_id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.comprador ALTER COLUMN comprador_id SET DEFAULT nextval('public.comprador_comprador_id_seq'::regclass);
+
+
+--
+-- TOC entry 2848 (class 2604 OID 16776)
+-- Name: produto id_produto; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.produto ALTER COLUMN id_produto SET DEFAULT nextval('public.produto_id_produto_seq'::regclass);
+
+
+--
+-- TOC entry 2849 (class 2604 OID 16787)
+-- Name: vendedor id_vendedor; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.vendedor ALTER COLUMN id_vendedor SET DEFAULT nextval('public.vendedor_id_vendedor_seq'::regclass);
+
+
+--
+-- TOC entry 2851 (class 2606 OID 16770)
+-- Name: comprador comprador_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.comprador
+    ADD CONSTRAINT comprador_pkey PRIMARY KEY (comprador_id);
+
+
+--
+-- TOC entry 2853 (class 2606 OID 16781)
+-- Name: produto produto_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.produto
+    ADD CONSTRAINT produto_pkey PRIMARY KEY (id_produto);
+
+
+--
+-- TOC entry 2855 (class 2606 OID 16789)
+-- Name: vendedor vendedor_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.vendedor
+    ADD CONSTRAINT vendedor_pkey PRIMARY KEY (id_vendedor);
+
+
+--
+-- TOC entry 2857 (class 2606 OID 16795)
+-- Name: produto fkkh5ig4d5fgc8f82w4n8bbrs7i; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.produto
+    ADD CONSTRAINT fkkh5ig4d5fgc8f82w4n8bbrs7i FOREIGN KEY (id_vendedor) REFERENCES public.vendedor(id_vendedor);
+
+
+--
+-- TOC entry 2856 (class 2606 OID 16790)
+-- Name: produto fktkg9oglvg4pl6chj3st2pji42; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.produto
+    ADD CONSTRAINT fktkg9oglvg4pl6chj3st2pji42 FOREIGN KEY (comprador_id) REFERENCES public.comprador(comprador_id);
+
+
+-- Completed on 2022-03-22 15:58:17 -03
+
+--
+-- PostgreSQL database dump complete
+--
+

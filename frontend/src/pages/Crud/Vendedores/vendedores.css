@@ -1,0 +1,19 @@
+.container-title-c-vendedores, .container-vendedores-create{
+    margin-top: 2em;
+}
+
+.btn-edit{
+    background: rgb(15, 170, 118);
+}
+
+.container-title-c-vendedores h3{
+    text-align: center;
+}
+
+.form-crud{
+    max-width: 500px;
+    margin: 2em auto;
+    
+}
+
+

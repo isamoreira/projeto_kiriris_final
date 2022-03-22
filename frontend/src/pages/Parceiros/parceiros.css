@@ -1,0 +1,16 @@
+.parceiros-container{
+    max-width: 500px;
+    margin: 2em auto;
+}
+
+.boxes-parceiros{
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+}
+
+#title-parceiros{
+    margin-top: 2em;
+    color:#00a16e;  
+    text-align: center;
+}
